@@ -20,7 +20,7 @@ const port = process.env.PORT || 5000;
 //Listener
 const start=async()=>{
     try {
-        await connectDB(MongoDbUrl)
+        await connectDB(`${MongoDbUrl}`)
         app.listen(port, () => console.log(`listening at port ${port}`));    
     } catch (error) {
         console.log(error)
